@@ -1,3 +1,5 @@
+/* global styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,11 @@
 }
 
 body {
-    background-color: rgb(77, 20, 67);
+    /* background-color: rgb(77, 20, 67); */
+    background-image: linear-gradient(to right top, #3c1053, #591f61, #752f6f, #91407c, #ad5389);
     font-family: 'Roboto', sans-serif;
     color: #3a3a3a;
+    min-height: 100vh;
 }
 
 header {
@@ -21,14 +25,31 @@ header {
     color: #fff;
 }
 
+.btn {
+    box-shadow: 5px 5px 10px 5px  rgb(36 36 36 / 42%);
+    margin: 2% 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 10px 5px rgb(36 36 36 / 42%);
+    font-size: 150%;
+    overflow: hidden;
+}
+
 .logo {
     font-size: 400%;
     font-weight: 700;
-    color: #cf920f;
+    /* color: #cf920f; */
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .game-area {
-    background-color: #cf920f;
+    /* background-color: #cf920f; */
+    /* gradient background created by Arjan van den Bs https://codepen.io/bingwa/pen/vYERWpv */
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     width: 85%;
     height: 60vh;
     max-width: 800px;
@@ -39,12 +60,28 @@ header {
     box-shadow: 5px 5px 10px 5px  rgb(36 36 36 / 42%);
 }
 
+.initial-state {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.start-game-btn {
+    height: 4em;
+}
+
+.game-rules-btn {
+    height: 2.5em;
+}
+
 .question-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100%;
     padding: 0 2%;
 }
 
@@ -73,20 +110,15 @@ header {
     width: 45%;
     height: 3.5em;
     padding: 1%;
-    margin: 2% 0;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 5px 5px 10px 5px rgb(36 36 36 / 42%);
-    font-size: 150%;
 }
 
-.quit-game-btn {
+.quit-game-btn, .next-question-btn {
     width: 25%;
     height: 2.5em;
-    font-size: 150%;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 5px 5px 10px 5px rgb(36 36 36 / 42%);
+}
+
+.next-question-btn i {
+    padding-left: 5px;
 }
 
 /* utility classes */
@@ -105,6 +137,11 @@ header {
     color: #fff;
 }
 
+.btn:hover {
+    background-image: linear-gradient(to right top, #3c1053, #591f61, #752f6f, #91407c, #ad5389);
+    color: #fff;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -113,5 +150,6 @@ header {
 
 .footer-links {
     text-align: center;
+    align-items: center;
     color: #fff;
 }
