@@ -20,13 +20,13 @@ header {
 }
 
 .logo {
-    font-size: large;
+    font-size: 400%;
     font-weight: 700;
     color: #fcc8c8
 }
 
 .game-area {
-    background-color: #fcc8c8;
+    background-color: #cf920f;
     width: 85%;
     height: 60vh;
     max-width: 800px;
@@ -34,11 +34,33 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    box-shadow: 5px 5px 10px 5px rgb(52 6 44 / 70%);
+    box-shadow: 5px 5px 10px 5px  rgb(36 36 36 / 42%);
 }
 
 .question-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.answer-btns-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.answer-btn {
+    width: 40%;
+    height: 3.5em;
+    padding: 1%;
+    margin: 2%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 10px 5px rgb(36 36 36 / 42%);
 }
 
 footer {
