@@ -14,8 +14,26 @@ body {
     min-height: 100vh;
 }
 
+.page-content {
+    min-height: 1200px;
+}
+
+.full-page-background-image {
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 250px 75px 250px;
+}
+
 header {
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     display:flex;
     flex-direction: column;
@@ -144,7 +162,6 @@ header {
 }
 
 .footer {
-    position: fixed;
     bottom: 0;
     left: 0;
 }
